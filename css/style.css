@@ -1,0 +1,136 @@
+/* GLOBAL */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    font-size: 20px;
+    scroll-behavior: smooth;
+}
+body {
+    background: #195FA5;
+    color: #fff;
+}
+
+/* BARRA DE NAVEGACIÓN */
+#navbar {
+    position: fixed; 
+    left: 0; 
+    top: 0; 
+    height: 100%; 
+    max-width: 250px; 
+    background-color: #144D85; 
+    display: flex;
+    flex-direction: column;
+    border-right: 4px solid #00e199;
+    overflow: auto;
+}
+.nav__header-h2 {
+    color: #14C85D;
+    text-align: center; 
+    padding: 10px;
+    border-bottom: 4px solid #14C85D;
+}
+.nav-link {
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    border-bottom: 1px solid #14C85D;
+}
+.nav-link:hover{
+    background-color:  #195FA5;
+    text-shadow: 1px 1px 5px #14C85D;
+}
+
+/* MAIN CONTENT*/
+.main-section {
+    margin-left: 260px;
+    margin-bottom: 10px; 
+    padding: 0 20px;
+    list-style-position: inside;
+    border-bottom: 1px solid #14C85D;
+}
+.html__header-h1 {
+    text-align: center;
+    font-size: 50px;
+    margin: 3rem 0 3rem 0;
+    background-color: #14C85D;
+}
+.header__h2{
+    margin-bottom: 10px;
+    font-size: 30px;
+    display: inline-block;
+    border-bottom: 4px solid #14C85D;
+    padding-bottom: 4px;
+    padding-top: 15px;
+}
+.header__p {
+    text-indent: 40px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+.main-section a {
+    text-decoration: none;
+    color: #14C85D;
+}
+
+/* ESTILO PARA LAS LISTAS */
+.titulos-listas {
+    margin-bottom: 5px; 
+    border-bottom: 1px solid #14C85D;
+    display: inline-block;
+}
+.parrafos-listas {
+    margin: 0 0 10px 20px;
+    border-left: 1px solid #14C85D;
+    border-right: 2px solid #14C85D;
+    padding: 0 20px 0 10px;
+    text-align: left;
+}
+.tipo-Lista { 
+    margin-left: 20px; 
+    list-style-type: none;
+    height: auto; 
+    margin-bottom: 50px;
+}
+.tipo-Lista li {
+    margin-left: 10px; 
+    padding-left: 10px; 
+}
+
+/* MEDIA QUERIES: */
+/* HACE QUE DESAPAREZCA LA BARRA DE NAVEGACIÓN EN CIERTOS DISPOSITIVOS */
+@media screen and (max-width: 700px) {
+    #navbar {
+        display: none;
+    }
+    .main-section {
+        margin-left: 0; 
+        padding: 20px; 
+    }
+}
+/* HACE QUE LAS LISTAS SE VEAN MAS LINDAS A BAJA RESOLUCIÓN */
+@media screen and (max-width: 300px) {
+    .tipo-Lista { 
+        margin-left: 20px; 
+        list-style-type: none;
+        height: auto; 
+    }
+    .tipo-Lista li {
+        margin-left: -10px; 
+        padding-left: -10px; 
+    }
+    .parrafos-listas {
+        border-right: none;
+    }
+}
+/* ESTO ACORTA EL LINK DE WPP */
+@media screen and (max-width: 450px) {
+    .acortar {
+        white-space: nowrap; 
+        overflow: hidden; 
+        text-overflow: ellipsis; 
+        max-width: 200px; 
+        display: block; 
+    }
+}
